@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: pokemon-auction-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: CHANNEL_USERNAME
+        sync: false
+      - key: DISCUSSION_ID
+        sync: false
+      - key: LOGS_CHANNEL_ID
+        sync: false
